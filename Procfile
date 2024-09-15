@@ -1,1 +1,1 @@
-worker: python MedVisionBOT.py
+worker: python bot.py   
