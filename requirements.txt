@@ -2,3 +2,4 @@ requests==2.30.0
 telebot==0.0.5
 pymongo==4.5.0
 datetime==5.2
+python-dotenv

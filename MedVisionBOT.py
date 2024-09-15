@@ -1,16 +1,20 @@
+import os
 import telebot
 import requests
 import pymongo as pg
 import datetime
 import pytz
 from concurrent.futures import ThreadPoolExecutor
+from dotenv import load_dotenv
+load_dotenv()
+
 
 # Configurações e instâncias
-user, password = 'joaopedroaqb10', 'jKq1oaUFxNPDdz6J'
+user, password = os.getenv("user"), os.getenv("password")
 myclient = pg.MongoClient(f"mongodb+srv://{user}:{password}@medvision.h7d5s.mongodb.net/?retryWrites=true&w=majority&appName=MedVision")
 mydb = myclient['dados_bot']
 mycol_object = mydb["dados"]
-BOT_TOKEN = '7214486908:AAFvh4TyFNwDRkvDJmVafc5cvaoTaXfN6s0'
+BOT_TOKEN = os.getenv("BOT_TOKEN")
 url = 'https://medvision-f391a54f3072.herokuapp.com/classificationApp'
 url_caption = ''
 classes_index = {
