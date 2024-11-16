@@ -15,7 +15,7 @@ myclient = pg.MongoClient(f"mongodb+srv://{user}:{password}@medvision.h7d5s.mong
 mydb = myclient['dados_bot']
 mycol_object = mydb["dados"]
 BOT_TOKEN = os.getenv("BOT_TOKEN")
-url = 'https://medvision-f391a54f3072.herokuapp.com/classificationApp'
+url = 'https://medvision-302df1a112b5.herokuapp.com/classificationApp'
 url_caption = ''
 classes_index = {
     'cerebromri': [1, 'Ressonância Magnética do Cérebro'],
